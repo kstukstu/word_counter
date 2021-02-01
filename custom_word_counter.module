@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function custom_word_counter_preprocess_field (&$variables) {
+  $name = $variables['element']['#field_name'];
+  $bundle = $variables['element']['#bundle'];
+  $config_count = \Drupal::config('custom_word_counter.body_field')
+    ->get('allow_counter');
+  if ($name === 'body' && $bundle === 'article' && $config_count === TRUE) {
+    foreach ($variables['items'] as $key => $item) {
+      $content = $item['content']['#text'];
+      $text = strip_tags($content);
+      $count = str_word_count($text);
+      $variables['items'][$key]['content']['#text'] = $content . t('Count words: ') . $count;
+    }
+  }
+}

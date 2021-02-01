@@ -1,0 +1,7 @@
+custom_word_counter.body_field:
+  type: config_object
+  label: Custom word counter
+  mapping:
+    allow_counter:
+      type: boolean
+      label: Enable word counter

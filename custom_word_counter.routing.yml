@@ -1,0 +1,7 @@
+custom_word_counter.body_field.form:
+  path: '/admin/config/custom_word_counter'
+  defaults:
+    _form: 'Drupal\custom_word_counter\Form\CustomWordCounter'
+    _title: 'Custom word counter'
+  requirements:
+    _permission: 'administer site configuration'

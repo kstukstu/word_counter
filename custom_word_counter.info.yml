@@ -1,0 +1,4 @@
+name: Custom words counter
+type: module
+description: 'Custom words counter'
+core_version_requirement: ^8.8 || ^9

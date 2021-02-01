@@ -1,0 +1,6 @@
+custom_word_counter.body_field.form:
+  route_name: custom_word_counter.body_field.form
+  weight: 111
+  title: 'Custom word counter'
+  description: 'The allow word counter in body field for articles content type'
+  parent: system.admin_config_system
